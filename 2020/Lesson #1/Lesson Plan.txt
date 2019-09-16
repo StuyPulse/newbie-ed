@@ -1,0 +1,10 @@
+The plan of the fist lesson is to cover the topics in this slide.
+https://docs.google.com/presentation/d/1z1E3HLfAEsyye_5G5BnJzk1hj3ShV2cvw7eL7QBW2Co
+
+Instead of doing the slide, I am considering doing live coding to explain subjects
+as it allows me to explain things using code instead of pointing to examples in the 
+slide.
+
+I think it might be more adaptable. The Lesson.java file in this folder is the
+plan that I would plan to take the live code in. It comes with explainations 
+and ode that should be used in the lesson.
