@@ -19,7 +19,11 @@ class Lesson {
         // TODO: Make a While Loop and count 1 - 10
 
         
-        // TODO: Make a function if you have time
+        // TODO: Look up documentation for File
+        // TODO: Make text file
+
+
+        // TODO: Make a function that calculates something
 
     }
 

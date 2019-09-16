@@ -7,4 +7,19 @@ slide.
 
 I think it might be more adaptable. The Lesson.java file in this folder is the
 plan that I would plan to take the live code in. It comes with explainations 
-and ode that should be used in the lesson.
+and code that should be used in the lesson.
+
+My plan is to cover:
+    - Comments
+    - Variables
+    - Print Statements
+    - Conditionals / If Statements
+    - While Loops
+        - For Loops?
+    - Imports?
+    - Objects
+        - Opening a file?
+    - Functions?
+        - Calling them
+        - Inputs
+        - Outputs
