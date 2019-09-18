@@ -24,7 +24,6 @@ class Lesson {
 
 
         // TODO: Make a function that calculates something
-
     }
 
 }
