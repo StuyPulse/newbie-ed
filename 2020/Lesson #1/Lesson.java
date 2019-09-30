@@ -1,7 +1,11 @@
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.File;
+
 class Lesson {
 
-    public static void main(String args[]) {
+    public static void main(String args) {
 
         // TODO: Explain Comments
 
@@ -16,14 +20,13 @@ class Lesson {
         // TODO: Use If with Conditionals
 
 
-        // TODO: Make a While Loop and count 1 - 10
-
+        // TODO: Make a While Loop
         
-        // TODO: Look up documentation for File
+
         // TODO: Make text file
 
 
-        // TODO: Make a function that calculates something
+        // TODO: Sumarize everything that happened in text file
     }
 
 }
