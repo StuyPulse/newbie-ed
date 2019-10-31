@@ -11,6 +11,7 @@ import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 
+import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
@@ -19,6 +20,10 @@ import frc.util.Gamepad;
 public class Robot extends TimedRobot {
 
   //Note: we use camel case to name the below (soLikeThis)
+  
+  //Documentation for below motor controllers:
+  //http://www.ctr-electronics.com/downloads/api/java/html/index.html
+
   private WPI_VictorSPX shooterMotor;
 
   private WPI_TalonSRX rightFrontMotor;
@@ -26,10 +31,16 @@ public class Robot extends TimedRobot {
   private WPI_TalonSRX leftFrontMotor;
   private WPI_TalonSRX leftRearMotor;
 
+  //Documentation for below:
+  //https://first.wpi.edu/FRC/roborio/release/docs/java/index.html
+
   private SpeedControllerGroup rightMotors;
   private SpeedControllerGroup leftMotors;
 
   private DifferentialDrive differentialDrive;
+
+  private Solenoid floop;
+  private boolean wasPressed; //needed to make sure one button press isn't mistaken as multiple presses
 
   //the Gamepad class we use is copy and pasted from previous years' robot code
   //you can find it in the util folder
@@ -64,6 +75,9 @@ public class Robot extends TimedRobot {
     //it takes two speed controllers as arguments (it must be the left one then the right)
     differentialDrive = new DifferentialDrive(leftMotors, rightMotors);
 
+    //makes new solenoid (for piston)
+    floop = new Solenoid(-1);
+
     gamepad = new Gamepad(0);
   }
 
@@ -95,6 +109,21 @@ public class Robot extends TimedRobot {
       //uses gamepad values for the left and right joysticks to set left and right motor speeds
       differentialDrive.tankDrive(gamepad.getLeftY(), gamepad.getRightY());
     }
+
+    //to open floop when holding button
+    if (gamepad.getRawDPadDown()) { //if the button is being held down, open floop
+      floop.set(true); 
+    } else { //otherwise (if the button is not being held down)
+      floop.set(false);
+    }
+
+    //OR if you want a toggle (press to open, press again to close...)
+
+    // if (!wasPressed && gamepad.getRawDPadUp()) { //makes sure was not pressed before but is pressed now
+    //   floop.set(!floop.get()); //sets floop to opposite of current value (true->false, false->true)
+    // }
+
+    // wasPressed = gamepad.getRawDPadUp(); //updates past value
   }
 
   @Override
