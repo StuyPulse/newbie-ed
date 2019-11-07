@@ -11,6 +11,9 @@ import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 
+import edu.wpi.first.wpilibj.AnalogInput;
+import edu.wpi.first.wpilibj.DigitalInput;
+import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.TimedRobot;
@@ -46,6 +49,14 @@ public class Robot extends TimedRobot {
   //you can find it in the util folder
   private Gamepad gamepad;
 
+  //digital inputs return boolean values, analog inputs return double values 
+  private DigitalInput IRsensor; //detect if something is in front of it
+  private DigitalInput limitSwitch; //like a button, returns whether or not it's being pressed
+  private AnalogInput lineSensor; //detect color of line it's facing
+
+  //Note: this is just one type of encoder
+  private Encoder encoder; //used to find distance a wheel turns
+
   @Override
   public void robotInit() {
     //makes new motor at port 13
@@ -79,6 +90,17 @@ public class Robot extends TimedRobot {
     floop = new Solenoid(-1);
 
     gamepad = new Gamepad(0);
+
+    IRsensor = new DigitalInput(-1);
+    limitSwitch = new DigitalInput(-1);
+    lineSensor = new AnalogInput(-1);
+
+    encoder = new Encoder(-1, -1);
+
+    //encoders receive evenly spaced out pulses as wheels turn
+    //this sets distance wheel travels at each pulse
+    //usually something like circumference/pulses per revolution
+    encoder.setDistancePerPulse(-1);
   }
 
   @Override
@@ -91,6 +113,12 @@ public class Robot extends TimedRobot {
 
   @Override
   public void autonomousPeriodic() {
+    //prints values received from sensors (methods are defined below)
+    System.out.println("IR Sensor Value: " + getIRSensorValue());
+    System.out.println("Limit Switch Value: " + getLimitSwitchValue());
+    System.out.println("Line Sensor Value: " + getLineSensorValue());
+    System.out.println("Encoder Ticks: " + getEncoderTicks());
+    System.out.println("Encoder Distance: " + getEncoderDistance());
   }
 
   @Override
@@ -128,5 +156,30 @@ public class Robot extends TimedRobot {
 
   @Override
   public void testPeriodic() {
+  }
+
+  //returns boolean representing value of IR sensor
+  private boolean getIRSensorValue() {
+    return IRsensor.get();
+  }
+
+  //returns boolean representing value of limit switch
+  private boolean getLimitSwitchValue() {
+    return limitSwitch.get();
+  }
+
+  //returns double representing value of line sensor
+  private double getLineSensorValue() {
+    return lineSensor.getValue();
+  }
+  
+  //returns number of pulses encoder has detected
+  private int getEncoderTicks() {
+    return encoder.get();
+  }
+
+  //returns the actual distance (calculated based on ticks and distance per pulse set before)
+  private double getEncoderDistance() {
+    return encoder.getDistance();
   }
 }
