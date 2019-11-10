@@ -10,6 +10,8 @@ package frc.robot;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
+import com.revrobotics.CANSparkMax;
+import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
 import edu.wpi.first.wpilibj.AnalogInput;
 import edu.wpi.first.wpilibj.DigitalInput;
@@ -17,6 +19,7 @@ import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.TimedRobot;
+import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import frc.util.Gamepad;
 
@@ -24,6 +27,11 @@ public class Robot extends TimedRobot {
 
   //Note: we use camel case to name the below (soLikeThis)
   
+  //Documentation for the below motor controller:
+  //http://www.revrobotics.com/content/sw/max/sw-docs/java/index.html
+
+  private CANSparkMax rollers;
+
   //Documentation for below motor controllers:
   //http://www.ctr-electronics.com/downloads/api/java/html/index.html
 
@@ -57,10 +65,19 @@ public class Robot extends TimedRobot {
   //Note: this is just one type of encoder
   private Encoder encoder; //used to find distance a wheel turns
 
+  private Timer timer;
+  private double startTime;
+
   @Override
   public void robotInit() {
+
+    //in addition to the port #, also have to specify motor type
+    //depends on what type of motor is connected to the controller
+    //can also be set to MotorType.kBrushed
+    rollers = new CANSparkMax(-1, MotorType.kBrushless);
+
     //makes new motor at port 13
-    shooterMotor = new WPI_VictorSPX(13);
+    shooterMotor = new WPI_VictorSPX(-1);
 
     //makes four new motors for the drivetrain
     //Note: -1 is used as a placeholder for the port
@@ -101,6 +118,8 @@ public class Robot extends TimedRobot {
     //this sets distance wheel travels at each pulse
     //usually something like circumference/pulses per revolution
     encoder.setDistancePerPulse(-1);
+
+    timer = new Timer();
   }
 
   @Override
@@ -109,6 +128,9 @@ public class Robot extends TimedRobot {
 
   @Override
   public void autonomousInit() {
+    //records start time of autonomous period 
+    //Timer.getFPGATimestamp() returns seconds since some time in the 1900s or something
+    startTime = Timer.getFPGATimestamp();
   }
 
   @Override
@@ -119,6 +141,14 @@ public class Robot extends TimedRobot {
     System.out.println("Line Sensor Value: " + getLineSensorValue());
     System.out.println("Encoder Ticks: " + getEncoderTicks());
     System.out.println("Encoder Distance: " + getEncoderDistance());
+
+    //makes robot go forward at half speed for two seconds
+    if (Timer.getFPGATimestamp() - startTime < 2) { //checks seconds robot has been running for
+      differentialDrive.arcadeDrive(0.5, 0.0); //runs robot if less than two seconds passed
+    } else {
+      differentialDrive.arcadeDrive(0.0, 0.0); //stops robot if it has been over two seconds
+    }
+
   }
 
   @Override
