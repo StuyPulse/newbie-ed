@@ -70,7 +70,7 @@ public class Robot extends TimedRobot {
 
   @Override
   public void robotInit() {
-
+  
     //in addition to the port #, also have to specify motor type
     //depends on what type of motor is connected to the controller
     //can also be set to MotorType.kBrushed
@@ -117,7 +117,7 @@ public class Robot extends TimedRobot {
     //encoders receive evenly spaced out pulses as wheels turn
     //this sets distance wheel travels at each pulse
     //usually something like circumference/pulses per revolution
-    encoder.setDistancePerPulse(-1);
+    encoder.setDistancePerPulse(6*Math.PI*24/60/1024); //updated 11/13/19
 
     timer = new Timer();
   }
@@ -148,7 +148,14 @@ public class Robot extends TimedRobot {
     } else {
       differentialDrive.arcadeDrive(0.0, 0.0); //stops robot if it has been over two seconds
     }
-
+    
+    //Edited 11/13:
+    if (encoder.getDistance() < 20) {
+      differentialDrive.tankDrive(0.3, 0.3);
+    }
+    else {
+      differentialDrive.tankDrive(0, 0);
+    }
   }
 
   @Override
