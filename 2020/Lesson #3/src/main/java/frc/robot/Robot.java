@@ -8,17 +8,28 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
-import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import frc.robot.subsystems.Drivetrain;
 
 public class Robot extends TimedRobot {
 
+  public static Drivetrain drivetrain;
+
   @Override
   public void robotInit() {
+    //creates new instance of Drivetrain object
+    drivetrain = new Drivetrain();
   }
 
   @Override
   public void robotPeriodic() {
+  }
+
+  @Override
+  public void disabledInit() {
+  }
+
+  @Override
+  public void disabledPeriodic() {
   }
 
   @Override
@@ -27,6 +38,17 @@ public class Robot extends TimedRobot {
 
   @Override
   public void autonomousPeriodic() {
+    //calls tankDrive method on drivetrain
+    //this is the method we made in Drivetrain.java, not the one for DifferentialDrive
+    drivetrain.tankDrive(0.5, 0.5);
+
+    //prints out the current tick count from the encoder
+    //again, this is using the method made in Drivetrain.java
+    System.out.println(drivetrain.getEncoderTicks());
+  }
+
+  @Override
+  public void teleopInit() {
   }
 
   @Override
