@@ -9,15 +9,20 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
 import frc.robot.subsystems.Drivetrain;
+import frc.util.Gamepad;
 
 public class Robot extends TimedRobot {
 
   public static Drivetrain drivetrain;
+  public static Gamepad gamepad; //temporary
 
   @Override
   public void robotInit() {
     //creates new instance of Drivetrain object
     drivetrain = new Drivetrain();
+
+    //makes new gamepad for now
+    gamepad = new Gamepad(0);
   }
 
   @Override
