@@ -1,20 +1,40 @@
 package frc.robot.commands;
 
-import frc.robot.Command;
+import edu.wpi.first.wpilibj.command.Command;
+
 import frc.robot.Robot;
+public class DrivetrainDriveCommand extends Command {
 
-public class DrivetrainDriveCommand implements Command {
+  public DrivetrainDriveCommand() {
+    // Use requires() here to declare subsystem dependencies
+    requires(Robot.drivetrain);
+  }
 
-    @Override
-    public void execute() {
-        //keeps updating tankdrive values with gamepad joystick values
-        Robot.drivetrain.tankDrive(Robot.gamepad.getLeftY(), Robot.gamepad.getRightY());
-    }
+  // Called just before this Command runs the first time
+  @Override
+  protected void initialize() {
+  }
 
-    @Override
-    public void end(boolean interrupted) {
-        //stops robot at the end of this command
-        Robot.drivetrain.tankDrive(0.0, 0.0);
-    }
+  // Called repeatedly when this Command is scheduled to run
+  @Override
+  protected void execute() {
+      Robot.drivetrain.tankDrive(Robot.oi.gamepad.getLeftY(), Robot.oi.gamepad.getRightY());
+  }
 
+  // Make this return true when this Command no longer needs to run execute()
+  @Override
+  protected boolean isFinished() {
+    return false;
+  }
+
+  // Called once after isFinished returns true
+  @Override
+  protected void end() {
+  }
+
+  // Called when another command which requires one or more of the same
+  // subsystems is scheduled to run
+  @Override
+  protected void interrupted() {
+  }
 }

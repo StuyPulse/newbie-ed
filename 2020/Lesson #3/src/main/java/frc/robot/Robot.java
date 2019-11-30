@@ -9,20 +9,25 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
 import frc.robot.subsystems.Drivetrain;
+import frc.robot.subsystems.Floop;
 import frc.util.Gamepad;
 
 public class Robot extends TimedRobot {
 
   public static Drivetrain drivetrain;
-  public static Gamepad gamepad; //temporary
+  public static Floop floop;
+  public static OI oi;
 
   @Override
   public void robotInit() {
     //creates new instance of Drivetrain object
     drivetrain = new Drivetrain();
 
-    //makes new gamepad for now
-    gamepad = new Gamepad(0);
+    floop = new Floop();
+
+    //makes new instance of OI (where buttons are connected with commands)
+    oi = new OI();
+
   }
 
   @Override
@@ -43,12 +48,8 @@ public class Robot extends TimedRobot {
 
   @Override
   public void autonomousPeriodic() {
-    //calls tankDrive method on drivetrain
-    //this is the method we made in Drivetrain.java, not the one for DifferentialDrive
-    drivetrain.tankDrive(0.5, 0.5);
-
     //prints out the current tick count from the encoder
-    //again, this is using the method made in Drivetrain.java
+    //this is using the method made in Drivetrain.java
     System.out.println(drivetrain.getEncoderTicks());
   }
 

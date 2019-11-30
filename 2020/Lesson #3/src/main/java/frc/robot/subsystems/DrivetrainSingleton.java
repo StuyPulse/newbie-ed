@@ -39,7 +39,7 @@ public class DrivetrainSingleton extends Subsystem {
   //this is a constructor
   //it is called when a new instance of this class is created
   
-  private Drivetrain() {
+  private DrivetrainSingleton() {
     leftFrontMotor = new WPI_TalonSRX(-1);
     leftRearMotor = new WPI_TalonSRX(-1);
     rightFrontMotor = new WPI_TalonSRX(-1);

@@ -13,6 +13,7 @@ import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
+import frc.robot.RobotMap;
 import frc.robot.commands.DrivetrainDriveCommand;
 
 //a subsystem is a part of a robot (ex: drivetrain, lift, rollers, etc.)
@@ -38,10 +39,10 @@ public class Drivetrain extends Subsystem {
   //this is a constructor
   //it is called when a new instance of this class is created
   public Drivetrain() {
-    leftFrontMotor = new WPI_TalonSRX(-1);
-    leftRearMotor = new WPI_TalonSRX(-1);
-    rightFrontMotor = new WPI_TalonSRX(-1);
-    rightRearMotor = new WPI_TalonSRX(-1);
+    leftFrontMotor = new WPI_TalonSRX(RobotMap.DRIVETRAIN_LEFT_FRONT_MOTOR_PORT);
+    leftRearMotor = new WPI_TalonSRX(RobotMap.DRIVETRAIN_LEFT_REAR_MOTOR_PORT);
+    rightFrontMotor = new WPI_TalonSRX(RobotMap.DRIVETRAIN_RIGHT_FRONT_MOTOR_PORT);
+    rightRearMotor = new WPI_TalonSRX(RobotMap.DRIVETRAIN_RIGHT_REAR_MOTOR_PORT);
 
     leftFrontMotor.setInverted(true);
     leftRearMotor.setInverted(true);
@@ -56,13 +57,14 @@ public class Drivetrain extends Subsystem {
     encoder = new Encoder(-1, -1);
     
     encoder.setDistancePerPulse(6*Math.PI/1024);
+    
   }
 
   //each subsystem has its own methods for controlling it
 
-  //ignore me for now
   @Override
-  public void initDefaultCommand() {
+  public void initDefaultCommand() { //this command is always run on the drivetrain
+    setDefaultCommand(new DrivetrainDriveCommand());
   }
 
   //this tankDrive method takes in two inputs for speed

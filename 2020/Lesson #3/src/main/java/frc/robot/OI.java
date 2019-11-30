@@ -7,36 +7,29 @@
 
 package frc.robot;
 
-/**
- * This class is the glue that binds the controls on the physical operator
- * interface to the commands and command groups that allow control of the robot.
- */
+import frc.robot.commands.FloopCloseCommand;
+import frc.robot.commands.FloopOpenCommand;
+import frc.robot.commands.FloopPullCommand;
+import frc.robot.commands.FloopPushCommand;
+import frc.robot.commands.FloopStartScoreCommand;
+import frc.robot.commands.FloopStopScoreCommand;
+import frc.util.Gamepad;
+
 public class OI {
-  //// CREATING BUTTONS
-  // One type of button is a joystick button which is any button on a
-  //// joystick.
-  // You create one by telling it which joystick it's on and which button
-  // number it is.
-  // Joystick stick = new Joystick(port);
-  // Button button = new JoystickButton(stick, buttonNumber);
 
-  // There are a few additional built in buttons you can use. Additionally,
-  // by subclassing Button you can create custom triggers and bind those to
-  // commands the same as any other Button.
+  public Gamepad gamepad; 
 
-  //// TRIGGERING COMMANDS WITH BUTTONS
-  // Once you have a button, it's trivial to bind it to a button in one of
-  // three ways:
+  public OI() {
 
-  // Start the command when the button is pressed and let it run the command
-  // until it is finished as determined by it's isFinished method.
-  // button.whenPressed(new ExampleCommand());
+    gamepad = new Gamepad(0);
 
-  // Run the command while the button is being held down and interrupt it once
-  // the button is released.
-  // button.whileHeld(new ExampleCommand());
+    //when each of the buttons is pressed, the corresponding command is called
+    gamepad.getLeftButton().whenPressed(new FloopPushCommand());
+    gamepad.getRightButton().whenPressed(new FloopPullCommand());
+    gamepad.getTopButton().whenPressed(new FloopOpenCommand());
+    gamepad.getBottomButton().whenPressed(new FloopCloseCommand());
 
-  // Start the command when the button is released and let it run the command
-  // until it is finished as determined by it's isFinished method.
-  // button.whenReleased(new ExampleCommand());
+    gamepad.getDPadLeft().whenPressed(new FloopStartScoreCommand());
+    gamepad.getDPadRight().whenPressed(new FloopStopScoreCommand());
+  }
 }
