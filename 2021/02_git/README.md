@@ -23,3 +23,10 @@ If you feel like spicing up your markdown file then try adding an image or maybe
 ## Example 
 
 Check out [john_doe](john_doe). 
+
+# Two Factor Authentication (2fa)
+
+In order to commit to our organization you'll need to have 2fa enabled. You can read about it [here](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/configuring-two-factor-authentication). <br /><br />
+There are two ways to commit with 2fa enabled: 
+1. Personal Access Token: this is a password that will replace your normal password. more into [here](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token). 
+2. SSH key: this uses a different protocool for the remote repo called [ssh](https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys). more info [here](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh). 
