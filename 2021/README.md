@@ -4,10 +4,10 @@ Here lives all the stuff for the 2021 newbie ed.
 
 ## Format 
 
-Each dirctory is organized by lesson, with the following format: `<number>_<lesson>`. <\br>
-Inside each lesson there is `README.md` with an assignment. <\br>
-For each assingment please make a folder for yourself like so: `<first>_<last>`. <\br>
-If a lesson has parts they should be named so: `<letter>_<sublesson>`. <\br>
+Each dirctory is organized by lesson, with the following format: `<number>_<lesson>`. <br />
+Inside each lesson there is `README.md` with an assignment. <br />
+For each assingment please make a folder for yourself like so: `<first>_<last>`. <br />
+If a lesson has parts they should be named so: `<letter>_<sublesson>`. <br />
 
 ### Example 
 
