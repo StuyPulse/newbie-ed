@@ -1,6 +1,6 @@
 # 02_git 
 
-Lesson Slides: [here](https://docs.google.com/presentation/d/1EMUmq-82oTyH2jIl2wT7KT6lPpmhIhBIWQ6qlKFcL0U/edit?usp=sharing)
+Lesson Slides: [here](https://docs.google.com/presentation/d/1EMUmq-82oTyH2jIl2wT7KT6lPpmhIhBIWQ6qlKFcL0U/edit?usp=sharing)<br />
 Recording: [here](https://drive.google.com/file/d/1mZUWKh0yP2WpUhcx5h9O63ko7zmCkMfK/view?usp=sharing)
 
 ## Assignment 
