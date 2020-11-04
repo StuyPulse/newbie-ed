@@ -10,6 +10,7 @@ You should first check if Java is already installed with step 4 and type in `jav
     4. Click `Next` then `Install` and give it permission
 3. To check if this worked, open (or reopen) Git Bash and type in `javac` and press `Enter`
 4. If command is not found, contact an oldbie and set up a meeting with them.
+    * The command is found if Git Bash spits out a bunch of stuff with --
 
 # How to set up Java (for all other operating systems)
 Go here: and follow the instruction for you specific operating system: https://adoptopenjdk.net/installation.html?variant=openjdk11&jvmVariant=hotspot (I would recommend you to use the same version and JVM as the one mentioned above)
