@@ -1,6 +1,13 @@
-# How to set up Java
-1. Go to File Explorer, and then go to This PC and double click on the drive your Windows is downloaded on (Most likely you C: drive)
-![Follow Highlighted](Images\Screenshot 2020-11-03 203856.png)
+# How to set up Java (For Windows (x64), updated 11/03/20)
+1. Go here: https://adoptopenjdk.net/?variant=openjdk11&jvmVariant=hotspot, and download `OpenJDK 11 (LTS)` with `HotSpot` JVM
+2. Run the `OpenJDK11U-jdk_x64_windows_hotspot_11.0.9_11.msi`
+    1. Click `Next`
+    2. Check the `I accept the terms in the License Agreement` box and click `Next`
+    3. Click the box next to `Set JAVA_HOME variable` and click `Entire feature will be installed on local hard drive`
+    4. Click `Next` then `Install` and give it permission
+3. To check if this worked, open (or reopen) Git Bash and type in `javac` and press `Enter`
+4. If command is not found, contact an oldbie and set up a meeting with them.
+
 
 # Hello, welcome to Java Basics
 Here's what you will be doing for this exercise (Use the terminal so you can practice)
