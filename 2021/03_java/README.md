@@ -1,5 +1,6 @@
 # How to set up Java (For Windows (x64), updated 11/03/20)
 (adoptopenjdk.net link is by the courtesy of our mentor, Jeanne Boyarsky)
+
 You should first check if Java is already installed with step 4 and type in `java --version` into Git Bash and make sure your version is java 11
 1. Go here: https://adoptopenjdk.net/?variant=openjdk11&jvmVariant=hotspot, and download `OpenJDK 11 (LTS)` with `HotSpot` JVM
 2. Run the `OpenJDK11U-jdk_x64_windows_hotspot_11.0.9_11.msi`
