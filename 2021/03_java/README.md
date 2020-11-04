@@ -10,6 +10,9 @@
 
 
 # Hello, welcome to Java Basics
+Slides link: https://docs.google.com/presentation/d/1xhS--sEqA-Y6u4INrUqtSythrm8nzE3HyGasOc0NnVc/edit?usp=sharing
+Recording link: https://drive.google.com/file/d/17YB9o5NXTYgFyKwlzl3xSuIz4gPC0aE2/view?usp=sharing
+
 Here's what you will be doing for this exercise (Use the terminal so you can practice)
 1. create a folder in 03_java and name it `first_last` (Ex: `pak_lau`)
 2. go inside your folder and create a file named `Main.java`(Your file system should match the one in the README for 2021 directory)
