@@ -1,6 +1,6 @@
 # How to set up Java
 1. Go to File Explorer, and then go to This PC and double click on the drive your Windows is downloaded on (Most likely you C: drive)
-![Follow Highlighted](Images/Screenshot 2020-11-03 203856.png)
+![Follow Highlighted](Images\Screenshot 2020-11-03 203856.png)
 
 # Hello, welcome to Java Basics
 Here's what you will be doing for this exercise (Use the terminal so you can practice)
