@@ -42,5 +42,5 @@ public class Main {
 # Discover small nuances of Java
 1. What does `System.out.println(5 + "5"); do?`?
 2. What would foo be set to if `double foo = 5;`?
-3. What would foo be set to if `int foo = 5.0;`?
+3. Would this work `int foo = 5.0;`?
 4. What would foo be set to if `5 / 2`?
