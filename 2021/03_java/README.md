@@ -18,7 +18,9 @@ Go here: and follow the instruction for you specific operating system: https://a
 # Hello, welcome to Java Basics
 Slides link: https://docs.google.com/presentation/d/1xhS--sEqA-Y6u4INrUqtSythrm8nzE3HyGasOc0NnVc/edit?usp=sharing
 
-Recording link: https://drive.google.com/file/d/17YB9o5NXTYgFyKwlzl3xSuIz4gPC0aE2/view?usp=sharing
+Part 1 Recording link: https://drive.google.com/file/d/17YB9o5NXTYgFyKwlzl3xSuIz4gPC0aE2/view?usp=sharing
+
+Part 2 Recording link: https://drive.google.com/file/d/1laO4PrsmS63i67C8rRpB0uQcMAspuHGc/view?usp=sharing
 
 Here's what you will be doing for this exercise (Use the terminal so you can practice)
 1. create a folder in 03_java and name it `first_last` (Ex: `pak_lau`)
