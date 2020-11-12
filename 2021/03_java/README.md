@@ -38,3 +38,9 @@ public class Main {
 8. Now edit that for loop and make it so that it only prints the even numbers
 9. repeat step 7
 10. push this code onto the github repo, please pull before pushing though
+
+# Discover small nuances of Java
+1. What does `System.out.println(5 + "5"); do?`?
+2. What would foo be set to if `double foo = 5;`?
+3. What would foo be set to if `int foo = 5.0;`?
+4. What would foo be set to if `5 / 2`?
