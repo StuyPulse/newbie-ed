@@ -19,6 +19,7 @@ public class Car {
   }
 }
 ```
+
     1. Add a new int field called mileage that is set to 0
     2. Add a field called `private static final int MAX_MILEAGE = 20;`
     3. Create a new constructor where it only takes in the model of a car and sets color to "colorless"
