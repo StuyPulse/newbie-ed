@@ -1,6 +1,6 @@
 # Exercise
 Edit the Car class to contain the requirements below (copy and paste the code into Car.java in your own folder (named as first_last) in this directory)
-```
+```java
 public class Car {
   private String model;
   private String color;
