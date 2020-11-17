@@ -18,13 +18,15 @@ Go here: and follow the instruction for you specific operating system: https://a
 # Hello, welcome to Java Basics
 Slides link: https://docs.google.com/presentation/d/1xhS--sEqA-Y6u4INrUqtSythrm8nzE3HyGasOc0NnVc/edit?usp=sharing
 
-Recording link: https://drive.google.com/file/d/17YB9o5NXTYgFyKwlzl3xSuIz4gPC0aE2/view?usp=sharing
+Part 1 Recording link: https://drive.google.com/file/d/17YB9o5NXTYgFyKwlzl3xSuIz4gPC0aE2/view?usp=sharing
+
+Part 2 Recording link: https://drive.google.com/file/d/1laO4PrsmS63i67C8rRpB0uQcMAspuHGc/view?usp=sharing
 
 Here's what you will be doing for this exercise (Use the terminal so you can practice)
 1. create a folder in 03_java and name it `first_last` (Ex: `pak_lau`)
 2. go inside your folder and create a file named `Main.java`(Your file system should match the one in the README for 2021 directory)
 3. copy and paste this into your file
-```
+```java
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
@@ -38,3 +40,11 @@ public class Main {
 8. Now edit that for loop and make it so that it only prints the even numbers
 9. repeat step 7
 10. push this code onto the github repo, please pull before pushing though
+
+# Discover small nuances of Java
+1. What does `System.out.println(5 + "5"); do?`?
+2. What would foo be set to if `double foo = 5;`?
+3. Would this work `int foo = 5.0;`?
+4. What would foo be set to if `int foo = 5 / 2;`?
+5. What about `double foo = 5 / 2;`?
+6. what about `double foo = 5 / 2.0;` or `double foo = 5.0 / 2;`?
