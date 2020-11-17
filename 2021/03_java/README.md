@@ -26,7 +26,7 @@ Here's what you will be doing for this exercise (Use the terminal so you can pra
 1. create a folder in 03_java and name it `first_last` (Ex: `pak_lau`)
 2. go inside your folder and create a file named `Main.java`(Your file system should match the one in the README for 2021 directory)
 3. copy and paste this into your file
-```
+```java
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
