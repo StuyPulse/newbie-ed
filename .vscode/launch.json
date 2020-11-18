@@ -2,17 +2,9 @@
     "configurations": [
         {
             "type": "java",
-            "name": "CodeLens (Launch) - ExampleOne",
+            "name": "CodeLens (Launch) - Main",
             "request": "launch",
-            "mainClass": "ExampleOne",
-            "projectName": "newbie-ed_1339a8a8"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - Lesson",
-            "request": "launch",
-            "mainClass": "Lesson",
-            "projectName": "newbie-ed_1339a8a8"
+            "mainClass": "Main"
         }
     ]
 }
