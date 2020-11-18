@@ -24,12 +24,9 @@ public class Car {
   }
 
   private void explode() {
-    System.out.println("5");
-    System.out.println("4");
-    System.out.println("3");
-    System.out.println("2");
-    System.out.println("1");
-    System.out.println("0");
+    for (int countdown = 5; countdown >= 0; countdown += -1) {
+	System.out.println(countdown);
+    }
     System.out.println("haha car go boom boom");
   }
   public void drive() {
