@@ -39,7 +39,10 @@ public class Car {
       explode();
     } else {
       System.out.println("vroom");
-      mileage++;
-    }
+      mileage++; }
+  }
+
+  public String toString() {
+    return "This car is a " + color + " " + model;
   }
 }
