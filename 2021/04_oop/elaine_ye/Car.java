@@ -11,7 +11,7 @@ public class Car {
 
   public Car(String model) {
     this.model = model;
-    this.color = "colorless";
+    color = "colorless";
   }
 
   public boolean willExplode() {
@@ -24,7 +24,7 @@ public class Car {
   }
 
   private void explode() {
-    for (int countdown = 5; countdown >= 0; countdown += -1) {
+    for (int countdown = 5; countdown >= 0; countdown--) {
 	System.out.println(countdown);
     }
     System.out.println("haha car go boom boom");
