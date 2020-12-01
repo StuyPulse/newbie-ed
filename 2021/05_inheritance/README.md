@@ -1,4 +1,8 @@
 # Exercise for Inheritance
+Slides: https://docs.google.com/presentation/d/12hOHTCozxR50GR-TB2lv7IknopCpWzUnPOd5ZjeXWnU/edit?usp=sharing
+
+Recording: https://drive.google.com/file/d/155qx4K6wS-7QVjgAgrNs8v7F_kJkKmFY/view?usp=sharing
+
 1. Create a folder in this directory (name is as first_last) and then cd into it
 2. Create a Hero class
 	1. It should have private fields that store the hero's attack, health, and resource stats
