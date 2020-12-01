@@ -4,11 +4,12 @@
 	1. It should have private fields that store the hero's attack, health, and resource stats
 		- Also add a field to contain resource type and a field to hold the name of the hero
 		- Keep in mind that there is a difference between current and max health (same for resources)
-	2. It should have a constructor that takes in name, max health, attack, resource type, and max resource
-	3. It should have setters and getters for those fields
-	4. It should have a method called `takeDamage(int n)` where n is the amount of health lost
-	5. It should have a method called `attack()` where it returns the value of attack
-	6. It should have a method called `useAbility(String str, int n)` that prints out that the hero used the ability str and returns n
+	2. Add a static field that contains how many heroes have been made (default value is 0)
+	3. It should have a constructor that takes in name, max health, attack, resource type, and max resource and increment heroesMade
+	4. It should have setters and getters for those fields
+	5. It should have a method called `takeDamage(int n)` where n is the amount of health lost
+	6. It should have a method called `attack()` where it returns the value of attack
+	7. It should have a method called `useAbility(String str, int n)` that prints out that the hero used the ability str and returns n
 		- Ex: the hero is called "Sam" and you call useAbility("heal"), it should print out "Sam used heal!"
 3. Create a Mage class that extends the Hero class
 	1. The Mage class's resource type is "mana" and the max amount is 100
