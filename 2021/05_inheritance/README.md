@@ -18,7 +18,7 @@
 4. Create a Berserker class that extends the Hero class
 	1. The Berserker class's resource type is "rage" and the max amount is 50
 	2. It should have a constructor that takes in all the missing parameters for the super constructor
-	3. It should override the `getAttack() method` where if rage >= 30, then it returns 1.5x the attack, and if it doesn't it returns attack and increases rage by 10
+	3. It should override the `getAttack() method` where if rage >= 30, then it returns 2x the attack, and if it doesn't it returns attack and increases rage by 10
 	4. It should have a method called `burst()` that uses `super.useAbility()`, where `str` is "burst" and `n` is the amount of rage the Berserker has, then set rage to 0
 	5. It should have a method called `heal()` that takes rage and converts it to health (all of the rage is consumed and the Berserker regains that amount of health up to a cap set by max health)
 5. Create a Knight class that extends the Hero class
