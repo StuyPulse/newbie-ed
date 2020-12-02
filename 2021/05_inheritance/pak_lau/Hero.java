@@ -6,7 +6,7 @@ public class Hero {
     private int maxResource;
     private String resourceType;
     private String name;
-    private static int heroesMade = 0;
+    static int heroesMade = 0;
 
     public Hero(int attack, int maxHealth, int maxResource, String resourceType, String name) {
         this.name = name;
