@@ -1,6 +1,6 @@
 public class Beserker extends Hero{
     public Berserker(String name, int atk, int maxHP){
-        super(name, currentHP, maxHP, atk, "rage", currentResource, 50)
+        super(name, currentHP, maxHP, atk, "rage", currentResource, 50);
     }
     @override
     public int getAtk(){
@@ -13,7 +13,7 @@ public class Beserker extends Hero{
     public burst(int n){
         setCurrentResource(0);
         int n = getCurrentResource();
-        return useAbility("burst", 0)
+        return useAbility("burst", 0);
     }
     public heal(){
         setCurrentHP(getCurrentResource() + getCurrentHP());
