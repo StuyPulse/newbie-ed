@@ -14,9 +14,15 @@
  * @author Cay Horstmann
  */
 
+import java.util.Set;
+
+import group1.*;
+
 import info.gridworld.actor.ActorWorld;
 import info.gridworld.actor.Bug;
 import info.gridworld.actor.Rock;
+
+
 
 /**
  * This class runs a world that contains a bug and a rock, added at random
@@ -27,12 +33,21 @@ import info.gridworld.actor.Rock;
  * This class is not tested on the AP CS A and AB exams.
  */
 public class BugRunner
+// aka bladerunner
 {
     public static void main(String[] args)
     {
         ActorWorld world = new ActorWorld();
-        world.add(new Bug());
-        world.add(new Rock());
+        
+
+        world.add(new AnthonyBug());
+        world.add(new Bee());
+        world.add(new BenBug());
+        world.add(new JuanBug(5));
+        world.add(new MommyMilkers());
+        world.add(new SammyBug());
+        world.add(new YasuoBug());
+
         world.show();
     }
 }
