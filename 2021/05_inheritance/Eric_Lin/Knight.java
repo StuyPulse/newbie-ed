@@ -12,8 +12,8 @@ public class Kinght extends Hero{
         setCurrentResource(getCurrentResource()+ 5 );
         return super.getAtk();
     }
-    public charge(){
-        return useAbility("charge", 3 * currentResource);
+    public int charge(){
+        return useAbility("charge", 3 * getCurrentResource());
         setCurrentResource(0);
     }
 }

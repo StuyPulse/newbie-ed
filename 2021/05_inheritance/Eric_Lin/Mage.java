@@ -10,3 +10,4 @@ public class Mage extends Hero{
         setCurrentResource(getMaxResource());
     }
 }
+ja

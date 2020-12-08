@@ -8,7 +8,7 @@ public class Hero{
     private String name;
 
     static int heroesMade = 0;
-    public herostats(String name, int currentHP, int maxHP, int atk, String resourceType, int currentResource, int maxResource){
+    public Hero(String name, int currentHP, int maxHP, int atk, String resourceType, int currentResource, int maxResource){
       this.name = name;
       this.currentHP = currentHP;
       this.maxHP = maxHP;
@@ -16,7 +16,7 @@ public class Hero{
       this.resourceType = resourceType;
       this.currentResource = currentResource;
       this.maxResource = maxResource; 
-      heroesmade ++;
+      heroesMade++;
     }
     public String getName(){
       return name;
@@ -25,7 +25,7 @@ public class Hero{
       return currentHP;
     }
     public int getMaxHP(){
-      return naxHP;
+      return maxHP;
     }
     public int getAtk(){
       return atk;
@@ -39,37 +39,39 @@ public class Hero{
     public int getMaxResource(){
       return maxResource;
     }
-    public String getName(){
-      return name;
-    }
     public int takeDamage(int n){
-      setCurrentHP(getCurrentHP() - n);
+      return setCurrentHP(getCurrentHP() - n);
     }
 
-    public int setCurrentHP(int n){
-      currentHP = n;
+    public void setCurrentHP(int n){
+       currentHP = n;
+       if (getCurrentHP() > getMaxHP())
+        setCurrentHP(getMaxHP());
+
     }
-    public int setMaxHP(int n){
-      maxHP = n;
+    public void setMaxHP(int n){
+       maxHP = n;
     }
-    public int setAtk(int n){
-      atk = n;
+    public void setAtk(int n){
+       atk = n;
     }
-    public int setResourceType(int str){
-      resourceType = str;
+    public void setResourceType(String str){
+       resourceType = str;
     }
-    public int setCurrentResource(int n){
+    public void setCurrentResource(int n){
       currentResource = n;
+      if (getCurrentResource() > getMaxResource())
+       setCurrentResource(getMaxResource());
     }
-    public int setMaxResource(int n){
-      maxResource = n;
+    public void setMaxResource(int n){
+       maxResource = n;
     }
 
-    public int setName(String s){
+    public void setName(String s){
       name = s;
     }
     public String useAbility(String str, int n){
-      System.out.println(setName() + "used" + str);
+       return System.out.println(getName() + "used" + str);
     }
 
 
