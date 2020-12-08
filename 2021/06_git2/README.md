@@ -10,8 +10,9 @@ Recording: tba <br />
 
 <img src="scrots/default.PNG" width="300" height="350"/>
 
+### Setup Instructions
 <p>
-Create a branch and name it group_#, replace # with your breakout room number.
+Create a branch and name it group_#, replacing # with your breakout room number.
 Create a folder named group_#, again replacing # with your breakout room number.</br>
 For each file append <code>package</code> followed by your group #.</br>
 See the example.</br>
