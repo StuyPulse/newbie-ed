@@ -8,7 +8,7 @@ Recording: tba <br />
 
 <p>For this assignment you will be doing some graphics through an OOP interface.</br>
 
-![default](scrots/default.PNG?raw=true)
+<img src="scrots/default.PNG" width="200" height="400"/>
 
 <p>
 Create a folder with your group # (no spaces please!).</br>
@@ -133,7 +133,7 @@ public static void main(String[] args)
     world.show(); 
 }
 ```
-![line](scrots/line.PNG?raw=true)
+<img src="scrots/line.PNG" width="200" height="400"/>
 
 ## Assignment
 1. Make a class called <code>BoxBug</code> that extends <code>Bug</code> but moves in a square. The side length should be changable and the default should be 4.</br>
