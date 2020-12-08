@@ -12,9 +12,9 @@ Recording: tba <br />
 
 ### Setup Instructions
 <p>
-Create a branch and name it group_#, replacing # with your breakout room number.
-Create a folder named group_#, again replacing # with your breakout room number.</br>
-For each file append <code>package</code> followed by your group #.</br>
+1. Create a branch and name it group_#, replacing # with your breakout room number.</br>
+2. Create a folder named group_#, again replacing # with your breakout room number.</br>
+For any files you put into the folder, append <code>package</code> followed by your group #.</br>
 See the example.</br>
 </p>
 
