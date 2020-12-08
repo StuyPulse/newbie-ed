@@ -10,13 +10,11 @@ Recording: tba <br />
 
 <img src="scrots/default.PNG" width="300" height="350"/>
 
-### Setup Instructions
-<p>
-1. Create a branch and name it group_#, replacing # with your breakout room number.</br>
-2. Create a folder named group_#, again replacing # with your breakout room number.</br>
-For any files you put into the folder, append <code>package</code> followed by your group #.</br>
-See the example.</br>
-</p>
+## Setup Instructions
+
+1. Create a branch and name it <code>group_#</code>, replacing # with your breakout room number.</br>
+2. Create a folder named <code>group#</code></br>
+3. For any files you put into the folder, append <code>package</code> followed by your group#.
 
 ## Classes Overview
 
@@ -140,7 +138,7 @@ public static void main(String[] args)
 ## Assignment
 1. Make a class called <code>BoxBug</code> that extends <code>Bug</code> but moves in a square. The side length should be changable and the default should be 4.</br>
 <p>
-<b>Hint</b>:</br>
+<b>&emsp; Hint</b>:</br>
 &emsp; What new variable might we need in <code>BoxBug</code> that is not already in <code>Bug</code>?</br>
 
 &emsp; How might we store the side length?
@@ -165,27 +163,30 @@ public static void main(String[] args)
 
 </p>
 
-2. Make a file called BoxBugRunner.java to test out your BoxBug class.
-If you're unsure of what to do, you can refer to the LineBugRunner.java file in the example folder.
-
-IMPORTANT: When compiling/running the file, make sure you are in the 06_git2 folder (and NOT in your group's folder).
-Ex: If you were trying to compile/run the LineBugRunner.java file, make sure you're in 06_git2 and then do <code>javac example/LineBugRunner.java</code> and <code>java example/LineBugRunner</code>.
-
-At this point, please push your code and branch, and make a pull request to main.
-
-3. Make a class called <code>CircleBug</code> that extends <code>Bug</code> and makes a circle.  
+2. Make a class called <code>CircleBug</code> that extends <code>Bug</code> and makes a circle. Also create a <code>CircleBugRunner</code>. 
 <p>
-<b>Hint</b>: instead of calling <code>turn</code> twice call it once.
+<b>&emsp; Hint</b>: instead of calling <code>turn</code> twice call it once.
 </p>
 
-4. Make a file called CircleBugRunner.java to test out your CircleBug class, similar to your BoxBugRunner.java file.
-
-5. Make a class called <code>SpiralBug</code> that extends <code>Bug</code> and makes a spiral.
+3. Make a class called <code>SpiralBug</code> that extends <code>Bug</code> and makes a spiral. Also create a <code>CircleBugRunner</code>.
 <p>
-<b>Hint</b>: think about how the side length might change.
+<b>&emsp; Hint</b>: think about how the side length might change.
 </p>
 
-6. Make a file called SpiralBugRunner.java to test our your SpiralBug class, similar to your BoxBugRunner.java file.
+<b>Note</b>: To run any file you must do it from the <code>06_git2</code> folder.</br> 
+
+<p>&emsp; path:</p> 
+
+```bash
+path/to/newbie-ed/2021/06_git2/
+```
+
+<p>&emsp; commands:</p> 
+
+```bash 
+javac example/LineBugRunner.java
+java example/LineBugRunner
+```
 
 ## Extra
 Want more? You can see the full assignment [here](https://drive.google.com/file/d/12Kd_t2hainOyO7B3dnClbNQ2vnV-iCvF/view?usp=sharing).</br>
