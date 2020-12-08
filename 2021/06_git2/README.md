@@ -169,7 +169,7 @@ public static void main(String[] args)
 If you're unsure of what to do, you can refer to the LineBugRunner.java file in the example folder.
 
 IMPORTANT: When compiling/running the file, make sure you are in the 06_git2 folder (and NOT in your group's folder).
-Ex: If you were trying to compile/run the LineBugRunner.java file, make sure you're in 06_git2 and then do <code>javac example/LineBugRunner.java<code> and <code>java example/LineBugRunner<code>.
+Ex: If you were trying to compile/run the LineBugRunner.java file, make sure you're in 06_git2 and then do <code>javac example/LineBugRunner.java</code> and <code>java example/LineBugRunner</code>.
 
 At this point, please push your code and branch, and make a pull request to main.
 
