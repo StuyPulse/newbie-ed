@@ -1,4 +1,4 @@
-package group2.Elaine; 
+package group2.Elaine;
 
 import info.gridworld.actor.Bug;
 
@@ -7,12 +7,12 @@ public class BoxBug extends Bug {
     int length; // how far the bug will move
 
     public BoxBug(int length) {
-        this.steps = 0;
+        this.steps = 1;
         this.length = length;
     }
 
     public BoxBug() {
-        this.steps = 0;
+        this.steps = 1;
         this.length = 4; // 4 is the default
     }
 
@@ -35,7 +35,7 @@ public class BoxBug extends Bug {
         else {
             // turn around and set counter to 0
             quarterTurn();
-            steps = 0;
+            steps = 1;
         }
     }
 }

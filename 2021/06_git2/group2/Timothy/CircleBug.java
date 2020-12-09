@@ -10,13 +10,13 @@ public class CircleBug extends Bug {
 
     // given length
     public CircleBug(int length) {
-        this.steps = 0;
+        this.steps = 1;
         this.length = length;
     }
 
     // default constructor
     public CircleBug() {
-        this.steps = 0;
+        this.steps = 1;
         this.length = 4;    // default, can be changed
     }
 
@@ -30,7 +30,7 @@ public class CircleBug extends Bug {
             steps++;        // increment steps counter
         } else {
             turn();         // rotate 45 degrees clockwise
-            steps = 0;      // reset steps
+            steps = 1;      // reset steps
         }
     }
 }

@@ -10,13 +10,13 @@ public class BoxBug extends Bug {
 
     // given length
     public BoxBug(int length) {
-        this.steps = 0;
+        this.steps = 1;
         this.length = length;
     }
 
     // default constructor
     public BoxBug() {
-        this.steps = 0;
+        this.steps = 1;
         this.length = 4;    // default, can be changed
     }
 
@@ -35,7 +35,7 @@ public class BoxBug extends Bug {
             steps++;        // increment steps counter
         } else {
             rightTurn();    // make a right
-            steps = 0;      // reset steps
+            steps = 1;      // reset steps
         }
     }
 }
