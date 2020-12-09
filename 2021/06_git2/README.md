@@ -163,27 +163,27 @@ public static void main(String[] args)
 
 </p>
 
-2. Make a class called <code>CircleBug</code> that extends <code>Bug</code> and makes a circle. Also create a <code>CircleBugRunner</code>. 
+2. Make a class called <code>CircleBug</code> that extends <code>Bug</code> and makes a circle. Also create a <code>CircleBugRunner</code>.
 <p>
 <b>&emsp; Hint</b>: instead of calling <code>turn</code> twice call it once.
 </p>
 
-3. Make a class called <code>SpiralBug</code> that extends <code>Bug</code> and makes a spiral. Also create a <code>CircleBugRunner</code>.
+3. Make a class called <code>SpiralBug</code> that extends <code>Bug</code> and makes a spiral. Also create a <code>SpiralBugRunner</code>.
 <p>
 <b>&emsp; Hint</b>: think about how the side length might change.
 </p>
 
-<b>Note</b>: To run any file you must do it from the <code>06_git2</code> folder.</br> 
+<b>Note</b>: To run any file you must do it from the <code>06_git2</code> folder.</br>
 
-<p>&emsp; path:</p> 
+<p>&emsp; path:</p>
 
 ```bash
 path/to/newbie-ed/2021/06_git2/
 ```
 
-<p>&emsp; commands:</p> 
+<p>&emsp; commands:</p>
 
-```bash 
+```bash
 javac example/LineBugRunner.java
 java example/LineBugRunner
 ```
