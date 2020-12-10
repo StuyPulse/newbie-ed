@@ -23,9 +23,8 @@ newbie-ed
    ├─ 03_java
       ├─ john_doe
          └─ Main.java
-   ├─ 04_oops
-   ├─ 05_inheritance
-   └─ 06_git2
+   ├─ 04_OOP
+   └─ 05_robot
 ```
 
 ## Order

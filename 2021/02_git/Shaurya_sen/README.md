@@ -1,2 +1,0 @@
-# Shaurya Sen
-Hello there

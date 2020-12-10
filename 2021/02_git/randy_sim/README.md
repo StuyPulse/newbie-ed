@@ -1,3 +1,0 @@
-# Randy Sim
-
-Hey.

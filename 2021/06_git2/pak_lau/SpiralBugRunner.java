@@ -1,19 +1,15 @@
-package group3;
+package pak_lau;
 
 import java.awt.Color;
-
 import info.gridworld.actor.ActorWorld;
 import info.gridworld.grid.Location;
 
-public class BoxBugKevinRunner {
+public class SpiralBugRunner {
     public static void main(String[] args) {
         ActorWorld world = new ActorWorld();
-        // add our two bugs
-        world.add(new Location(5, 2), new BoxBugKevin());
-        BoxBugKevin foo = new BoxBugKevin(2);
-        // changing color
+        SpiralBug foo = new SpiralBug(3);
         foo.setColor(Color.YELLOW);
-        world.add(new Location(5, 6), foo);
+        world.add(new Location(5, 2), foo);
         world.show();
     }
 }

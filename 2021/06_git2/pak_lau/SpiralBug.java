@@ -3,16 +3,16 @@ package pak_lau;
 import info.gridworld.actor.Bug;
 import info.gridworld.grid.Location;
 
-public class BoxBug extends Bug {
+public class SpiralBug extends Bug {
     int sideLength;
     int steps;
 
-    public BoxBug(int sideLength) {
+    public SpiralBug(int sideLength) {
         this.sideLength = sideLength;
         steps = 1;
     }
 
-    public BoxBug() {
+    public SpiralBug() {
         this(4);
     }
 
@@ -29,6 +29,7 @@ public class BoxBug extends Bug {
         } else {
             turn();
             steps = 1;
+            sideLength++;
         }
     }
 }
