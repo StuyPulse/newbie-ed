@@ -12,8 +12,7 @@ public class BoxBug extends Bug {
     }
 
     public BoxBug() {
-        this.steps = 1;
-        this.length = 4; // 4 is the default
+        this(4); // 4 is the default
     }
 
     // this is a helper funtion
