@@ -4,7 +4,14 @@
             "type": "java",
             "name": "CodeLens (Launch) - Main",
             "request": "launch",
-            "mainClass": "Main"
+            "mainClass": "Main",
+            "projectName": "newbie-ed_4a15b88d"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
         }
     ]
 }
