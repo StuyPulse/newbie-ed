@@ -16,6 +16,7 @@ Whether you like it or not, you are part of a team now. Over the next <kbd>blank
 The activity itself will be to code (from scratch) a **Point** and **Triangle** class. **Triangle**s are *made up of* **Point**s, meaning that **Point**s need **Triangle**s to fully function, and **Triangle**s need **Point**s to exist.
 
 #### Point
+```
 Point(x, y)
 Point(p)
 toString()
@@ -25,11 +26,14 @@ setX(new x)
 setY(new y)
 * distanceBetween(p1, p2)
 distanceTo(other)
+```
 
 #### Triangle
+```
 Triangle(p1, p2, p3)
 Triangle(x1, y1, x2, y2, x3, y3)
 toString()
 getPerimeter()
 getVertex(n)
 setVertex(n, p)
+```
