@@ -19,7 +19,7 @@ public class Triangle{
         return v1.toString() + v2.toString() + v3.toString();
     }
 
-    public int getPerimeter() {
+    public double getPerimeter() {
         return v1.distanceTo(v2) + v2.distanceTo(v3) + v3.distanceTo(v1);
     }
 
@@ -27,20 +27,17 @@ public class Triangle{
         switch(n) {
             case 1:
                 return v1;
-                break;
             case 2:
                 return v2;
-                break;
             case 3:
                 return v3;
-                break;
-            default: 
-                break;
+            default:
+                return null; 
         }
 
     }
 
-    public Point setVertex(n, p) {
+    public void setVertex(int n, Point p) {
         switch(n) {
             case 1:
                 v1 = p;
