@@ -37,7 +37,7 @@ public class Point {
     }
     
     public double distanceTo(Point other){
-        return Math.sqrt(Math.pow(getX() - other.getX(), 2) + Math.pow(getY() - other.getY(), 2));
+        return distanceBetween(this, other);
     }
     
 }
