@@ -94,3 +94,4 @@ public class Berserker extends Hero {
 
 }
 ```
+For much more detailed information visit this: https://github.com/StuyPulse/RoboticsCodingStandard
