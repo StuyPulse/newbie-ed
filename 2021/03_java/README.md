@@ -48,3 +48,49 @@ public class Main {
 4. What would foo be set to if `int foo = 5 / 2;`?
 5. What about `double foo = 5 / 2;`?
 6. what about `double foo = 5 / 2.0;` or `double foo = 5.0 / 2;`?
+
+# Java Conventions
+* ClassNames and FileNames(Pascal Case)
+* methodNames() and variableNames (camel Case)
+* Rule of thumb, after every `{`, press enter and tab
+* There should be a space between `{` and classNames, methodNames(), etc.
+* There should not be a space between `(` and methodNames(), if(), for(), etc.
+* For if statments, put if, else if, or else after `}` for the previous control statements
+    * Look under getAttack()
+    * If a normal statement comes after a `}` put that statement on a new line (see the last line of getAttack())
+* Put an empty line between each method in a class, but not variables (unless u're grouping them)
+```java
+public class Berserker extends Hero {
+
+    private static int hi = 5;
+    private static int bye = 6;
+
+    public Berserker(int attack, int maxHealth, String name) {
+        super(attack, maxHealth, 50, "rage", name);
+    }
+
+    @Override
+    public int getAttack() {
+        if(getResource() >= 30) {
+            return 2 * super.getAttack();
+        } else {
+            setResource(getResource() + 10);
+            return super.getAttack();
+        }
+        System.out.println("You shouldn't be seeing this");
+    }
+
+    public int burst() {
+        int n = getResource();
+        setResource(0);
+        return useAbility("burst", n);
+    }
+
+    public void heal() {
+        int n = getResource();
+        setResource(0);
+        setHealth(getHealth() + n);
+    }
+
+}
+```
