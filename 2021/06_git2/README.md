@@ -1,7 +1,7 @@
 # 06_git2
 
 Lesson Slides: [here](https://docs.google.com/presentation/d/1I6M1l_POiYG95YKMh-ZkZALHu0sUyhsVrgU8gIOpjFo/edit?usp=sharing)<br />
-Recording: tba <br />
+Recording: [here](https://drive.google.com/file/d/1XpHoHqZGDORBUtkLYxtfEUakzR4mEUCo/view?usp=sharing) <br />
 
 ## Introduction
 <p> Note: Despite being called git2 this assignment has little to do with git.</p>
