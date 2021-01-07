@@ -61,7 +61,7 @@ You can use them if you want but they're pretty cringe in my opinion.
 ## Robot Code
 <ul>
     <li> 
-        <a href="https://frcdocs.wpi.edu/en/latest/docs/software/vscode-overview/index.html">FRC Documentation</a>
+        <a href="https://frcdocs.wpi.edu/en/latest/docs/software/commandbased/index.html">FRC Documentation</a>
         <p> There probably isn't a better resource for learning robot code than the official documentation itself. </p>
     </li>
     <li>
