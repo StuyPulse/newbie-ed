@@ -1,3 +1,3 @@
-#Newbie Ed. 2022
+# Newbie Ed. 2022
 
-everything is empty for now
+work in progress
