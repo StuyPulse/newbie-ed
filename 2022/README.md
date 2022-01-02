@@ -1,3 +1,3 @@
 # Newbie Ed. 2022
 
-work in progress
+current topic: [Advanced Java](https://github.com/StuyPulse/newbie-ed/blob/main/2022/04_AdvancedJava/README.md)
