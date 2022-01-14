@@ -1,0 +1,22 @@
+arcade
+ - speed
+ - turn
+
+arcade -> tank
+ - left: speed + turn
+ - right: speed - turn
+
+arcade(0.5, 0.25) -->
+tank(0.75, 0.25)
+
+Subsystem      <--- addRequirements
+    |            /
+SubsystemBase   /
+    |          /
+RomiDrivetrain/
+
+Command         <-- Command getAutonomousCommand
+    |
+CommandBase
+    |
+DriveForwardCommand
