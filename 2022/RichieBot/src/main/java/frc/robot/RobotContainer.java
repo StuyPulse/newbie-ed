@@ -5,12 +5,18 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.GenericHID;
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
 import frc.robot.commands.DriveDistanceCommand;
 import frc.robot.commands.DriveForwardCommand;
 import frc.robot.commands.ExampleCommand;
+import frc.robot.commands.TankDriveCommand;
 import frc.robot.subsystems.RomiDrivetrain;
 import edu.wpi.first.wpilibj2.command.Command;
+
+import com.stuypulse.stuylib.input.Gamepad;
+import com.stuypulse.stuylib.input.gamepads.AutoGamepad;
+import com.stuypulse.stuylib.input.gamepads.Xbox;
 
 /**
  * This class is where the bulk of the robot should be declared. Since
@@ -20,10 +26,14 @@ import edu.wpi.first.wpilibj2.command.Command;
  * periodic methods (other than the scheduler calls). Instead, the structure of
  * the robot (including
  * subsystems, commands, and button mappings) should be declared here.
+
  */
 public class RobotContainer {
     // The robot's subsystems and commands are defined here...
     private final RomiDrivetrain m_romiDrivetrain = new RomiDrivetrain();
+
+    // https://stuypulse.github.io/StuyLib/com/stuypulse/stuylib/input/gamepads/AutoGamepad.html
+    private Gamepad driver = new AutoGamepad(0);
 
     // private final ExampleCommand m_autoCommand = new
     // ExampleCommand(m_romiDrivetrain);
@@ -32,6 +42,9 @@ public class RobotContainer {
      * The container for the robot. Contains subsystems, OI devices, and commands.
      */
     public RobotContainer() {
+
+        m_romiDrivetrain.setDefaultCommand(new TankDriveCommand(m_romiDrivetrain, driver));
+
         // Configure the button bindings
         configureButtonBindings();
     }
@@ -45,6 +58,13 @@ public class RobotContainer {
      * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
      */
     private void configureButtonBindings() {
+        // gamepad.getButton().whenPressed(Command)
+        // gamepad.getButton().whileHeld(Command)
+        driver.getLeftButton().whenPressed(new DriveDistanceCommand(m_romiDrivetrain, 69));
+        /////////////////////////////
+        // driver.getRawLeftButton();
+        
+        
     }
 
     /**
