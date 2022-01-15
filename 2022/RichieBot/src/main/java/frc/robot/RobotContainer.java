@@ -7,9 +7,11 @@ package frc.robot;
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
+import frc.robot.commands.Cook;
 import frc.robot.commands.DriveDistanceCommand;
 import frc.robot.commands.DriveForwardCommand;
 import frc.robot.commands.ExampleCommand;
+import frc.robot.subsystems.Bread;
 import frc.robot.commands.TankDriveCommand;
 import frc.robot.subsystems.RomiDrivetrain;
 import edu.wpi.first.wpilibj2.command.Command;
@@ -30,7 +32,8 @@ import com.stuypulse.stuylib.input.gamepads.Xbox;
  */
 public class RobotContainer {
     // The robot's subsystems and commands are defined here...
-    private final RomiDrivetrain m_romiDrivetrain = new RomiDrivetrain();
+    // private final RomiDrivetrain m_romiDrivetrain = new RomiDrivetrain();
+    private Bread bread = new Bread();
 
     // https://stuypulse.github.io/StuyLib/com/stuypulse/stuylib/input/gamepads/AutoGamepad.html
     private Gamepad driver = new AutoGamepad(0);
@@ -75,6 +78,7 @@ public class RobotContainer {
     public Command getAutonomousCommand() {
         // An ExampleCommand will run in autonomous
         // return new DriveForwardCommand(m_romiDrivetrain);
-        return new DriveDistanceCommand(m_romiDrivetrain, 72.0);
+        // return new DriveDistanceCommand(m_romiDrivetrain, 72.0);
+        return new Cook(bread);
     }
 }
