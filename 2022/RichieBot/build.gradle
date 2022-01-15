@@ -6,6 +6,13 @@ plugins {
 sourceCompatibility = JavaVersion.VERSION_11
 targetCompatibility = JavaVersion.VERSION_11
 
+
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+}
+
 def ROBOT_MAIN_CLASS = "frc.robot.Main"
 
 // Set this to true to enable desktop support.
@@ -31,6 +38,8 @@ dependencies {
     // Websocket extensions require additional configuration.
     // simulation wpi.deps.sim.ws_server(wpi.platforms.desktop, false)
     simulation wpi.deps.sim.ws_client(wpi.platforms.desktop, false)
+
+    implementation 'com.github.StuyPulse:StuyLib:v2021.2.2'
 }
 
 // Set the websocket remote host (the Romi IP address).
