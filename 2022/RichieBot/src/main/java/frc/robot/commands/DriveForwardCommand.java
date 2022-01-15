@@ -26,7 +26,7 @@ public class DriveForwardCommand extends CommandBase {
 
     // execute - runs repeatedly every 50ms until command ends
     public void execute() {
-        drivetrain.tankDrive(1, 1);
+        drivetrain.tankDrive(-0.25, 0.25);
     }
     
     // isFinished - returns if command should end 
