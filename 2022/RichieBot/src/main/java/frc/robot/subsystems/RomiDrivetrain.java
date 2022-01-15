@@ -63,4 +63,9 @@ public class RomiDrivetrain extends SubsystemBase {
         tankDrive(0.0, 0.0);
     }
 
+    @Override
+    public void periodic() {
+
+    }
+
 }
