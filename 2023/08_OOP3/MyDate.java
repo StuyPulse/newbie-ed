@@ -64,13 +64,29 @@ public class MyDate {
         return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0; 
     }
     public int getDayOfWeek(int year, int month, int day) {
-        // Use Zeller's congruence
-        //tehe im not revealing this answer :P 
-        return 0; //placeholder 
+        // Zeller's congruence
+        int d = day;
+        int m = month;
+        int y = year;
+        if (m == 1 || m == 2) {
+            m += 12;
+            y -= 1;
+        }
+        int h = (d + (13 * (m + 1)) / 5 + y + y / 4 - y / 100 + y / 400) % 7;
+        return h;
     }
     public MyDate nextDay() {
-        //tehe im not revealing this answer :P
-        return this; //placeholder
+        if (this.day < this.DAYS_IN_MONTHS[this.month - 1]) {
+            this.day += 1;
+        } else if (this.month < 12) {
+            this.month += 1;
+            this.day = 1;
+        } else {
+            this.year += 1;
+            this.month = 1;
+            this.day = 1;
+        }
+        return this;
     }
     public MyDate nextMonth() {
         if (this.month < 12) {
