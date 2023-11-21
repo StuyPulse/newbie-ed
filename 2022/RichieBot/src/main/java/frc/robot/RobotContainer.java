@@ -32,7 +32,7 @@ import com.stuypulse.stuylib.input.gamepads.Xbox;
  */
 public class RobotContainer {
     // The robot's subsystems and commands are defined here...
-    // private final RomiDrivetrain m_romiDrivetrain = new RomiDrivetrain();
+    private final RomiDrivetrain m_romiDrivetrain = new RomiDrivetrain();
     private Bread bread = new Bread();
 
     // https://stuypulse.github.io/StuyLib/com/stuypulse/stuylib/input/gamepads/AutoGamepad.html
