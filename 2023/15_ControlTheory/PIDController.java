@@ -25,6 +25,7 @@ public class PIDController extends Controller {
     //you don't make setters for PID constants because you don't want them to change
 
     //PID controller's getOutput method
+    @Override
     public double getOutput(double error) {
         double p = kP * error;
         double i = kI * integral(error);

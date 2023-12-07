@@ -28,12 +28,13 @@ public class FeedForwardController extends Controller {
         return kV * velocity + kA * acceleration + kS;
     }
 
+    @Override
     public double getOutput(double velocity) {
-        return getOutput(velocity, 0);
+        return getOutput(velocity, getAccelration(velocity));
     }
 
     //getAcceleration using the slope of the line between the current velocity and the previous velocity
-    public double getAcceleration(double velocity, double dt) {
+    public double getAcceleration(double velocity) {
         return velocity / dt;
     }
 }
