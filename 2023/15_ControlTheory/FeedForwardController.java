@@ -30,7 +30,7 @@ public class FeedForwardController extends Controller {
 
     @Override
     public double getOutput(double velocity) {
-        return getOutput(velocity, getAccelration(velocity));
+        return getOutput(velocity, getAcceleration(velocity));
     }
 
     //getAcceleration using the slope of the line between the current velocity and the previous velocity
