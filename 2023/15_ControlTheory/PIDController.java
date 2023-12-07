@@ -12,33 +12,33 @@ public class PIDController extends Controller {
     }
 
     //getters for PID constants
-    public getkP() {
+    public double getkP() {
         return kP;
     }
-    public getkI() {
+    public double getkI() {
         return kI;
     }
-    public getkD() {
+    public double getkD() {
         return kD;
     }
 
     //you don't make setters for PID constants because you don't want them to change
 
     //PID controller's getOutput method
-    public double getOutput(double error, double dt) {
+    public double getOutput(double error) {
         double p = kP * error;
-        double i = kI * integral(error, dt);
-        double d = kD * deriviative(error, dt);
+        double i = kI * integral(error);
+        double d = kD * deriviative(error);
         return p + i + d;
     }
 
     //integral will basically find the sum of all the errors over time (area under the curve), which I simplified to error * dt
-    public double integral(double error, double dt) {
-        return error * dt;
+    public double integral(double error) {
+        return error * this.dt;
     }
 
     //deriviative will find the slope of the line between the current error and the previous error, which I simplified to error / dt
-    public double deriviative(double error, double dt) {
-        return error / dt;
+    public double deriviative(double error) {
+        return error / this.dt;
     }
 }

@@ -1,5 +1,6 @@
 public abstract class Controller {
-    private final double dt;
+    protected final double dt;
+
 
     public Controller() {
         this.dt = 0.02;
