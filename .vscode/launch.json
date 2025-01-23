@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "newbie-ed_7dbd7922"
+        },
+        {
+            "type": "java",
+            "name": "Lesson7",
+            "request": "launch",
+            "mainClass": "Lesson7",
+            "projectName": "newbie-ed_7dbd7922"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Main",
             "request": "launch",
             "mainClass": "Main",

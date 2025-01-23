@@ -30,6 +30,10 @@ class Point {
         this.x = x;
         this.y = y; 
     }
+    public Point() {
+        this.x = 1;
+        this.y = 1;
+    }
     static double getDistance(Point point, Point toPoint) {
         return Math.sqrt(Math.pow(point.x - toPoint.x, 2) + Math.pow(point.y - toPoint.y, 2));
     }
